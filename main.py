@@ -14,8 +14,8 @@ class VanillaRNN:
     chars = list(set(data))
     num_data = len(data)
     num_chars = len(chars) 
-    char_to_index = {i:c for i,c in enumerate(chars)}
-    index_to_char = {c:i for i,c in enumerate(chars)}
+    self.char_to_index = {i:c for i,c in enumerate(chars)}
+    self.index_to_char = {c:i for i,c in enumerate(chars)}
     self.num_hidden_units = num_hidden_units
     self.vocab_size = num_chars
     self.whh = np.random.randn(num_hidden_units,num_hidden_units)*0.01
